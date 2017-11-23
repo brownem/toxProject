@@ -9,7 +9,7 @@ Our dataset was produced by the United States Environmental Protection Agency (E
 
 # Chemcial Characteristics
 | PC1 | Value | Definition |
-|---|---|---|
+|:---|:---|:---|
 | Mol_MW | 0.71 | Molecular Weight of Molecule |
 | SASA | 0.68 | Total solvent surface accessible surface area in square angstroms |
 | QPolrz | 0.83 | Predicted polarization in cubic angstroms |
