@@ -1,17 +1,22 @@
+library(psych)
+library(GPArotation)
+
 cat("\f")
-#lines 4-5 WILL DELETE ALL VARIABLES AND CLEAR WORKSPACE.
-#COMMENT-OUT IF THIS IS UNDESIRABLE
+## lines 7-8 WILL DELETE ALL VARIABLES AND CLEAR WORKSPACE.
+## COMMENT-OUT IF THIS IS UNDESIRABLE
 closeAllConnections()
 rm(list=ls())
 
-##print(datatest)
+## print(datatest)
 datatest <- read.csv(file = "ToxData.csv", header = TRUE, sep = ",")
 datatest <- datatest[, c(7:39, 42:52, 57:59)]
 
 
-##print(mm)
+## print(mm)
 mm <- data.matrix(datatest)
 
+## class <- which(colnames(datatest)=="class")
+## datatest <- datatest[,-class]
 datatest$stars          <- datatest$stars       - mean(datatest$stars)
 datatest$amine          <- datatest$amine       - mean(datatest$amine)
 datatest$amidine        <- datatest$amidine     - mean(datatest$amidine)
@@ -60,24 +65,19 @@ datatest$EA.AM1         <- datatest$EA.AM1      - mean(datatest$EA.AM1)
 datatest$IA.AM1         <- datatest$IA.AM1      - mean(datatest$IA.AM1)
 datatest$Chem.Pot       <- datatest$Chem.Pot    - mean(datatest$Chem.Pot)
 
-# class <- which(colnames(datatest)=="class")
-# datatest <- datatest[,-class]
 
+## print(dataM)
 dataM   <- data.matrix(datatest)
 
-#print(dataM)
-
+## print(cov)
 cov     <- t(dataM) %*% (dataM)
 cov     <- cov/length(datatest$acid)
 
-##print(cov)
 
+## print(val)
+## vec <- ee$vectors
 ee      <- eigen(cov)
 val     <- ee$values
-
-##print(val)
-#vec <- ee$vectors
-
 val     <- (ee$values)/(sum(ee$values))
 val     <- ee$values
 
@@ -103,8 +103,6 @@ print(r)
 sss         <- apply(corr^2, 1, sum)
 print(sss)
 
-library(psych)
-library(GPArotation)
 fit         <- principal(datatest,nfactors=3,
                  rotate="varimax")
 print(fit)
