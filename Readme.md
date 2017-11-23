@@ -15,7 +15,7 @@ Our dataset was produced by the United States Environmental Protection Agency (E
 | QPolrz | 0.83 | Predicted polarization in cubic angstroms |
 | QPlogPC16	| 0.91 | Predicted hexadecane/gas partition coefficient |
 | QPlogPoct	| 0.76 | Predicted octanol/gas partition coefficient |
-| nonHatm | 0.9 | Number of heavy atoms (nonhydrogen atoms) |
+| nonHatm | 0.90 | Number of heavy atoms (nonhydrogen atoms) |
 | **PC2** | **Value** | **Definition** |
 | FISA | 0.68 | Hydrophilic component of the SASA |
 | QPPCaco | 0.72 | Predicted apparent Caco-2 cell permeability in nm/sec  (passing the gut-blood barrier) |
