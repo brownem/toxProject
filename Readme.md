@@ -8,7 +8,7 @@ Project was based on the toxicity data for a particular species of fish. In this
 Our dataset was produced by the United States Environmental Protection Agency (EPA), and contains a large range of potential toxins. We were able to eliminate some of them right away, due to zero-values for all samples. The remaining variables were fed into an R program to identify any correlation between them and their contribution to population die-offs of natural fish populations.
 
 # Chemcial Characteristics
-| PC1 | | Definition |
+| PC1 | Value | Definition |
 |---|---|---|
 | Mol_MW | 0.71 | Molecular Weight of Molecule |
 | SASA | 0.68 | Total solvent surface accessible surface area in square angstroms |
@@ -16,8 +16,7 @@ Our dataset was produced by the United States Environmental Protection Agency (E
 | QPlogPC16	| 0.91 | Predicted hexadecane/gas partition coefficient |
 | QPlogPoct	| 0.76 | Predicted octanol/gas partition coefficient |
 | nonHatm | 0.9 | Number of heavy atoms (nonhydrogen atoms) |
-| **PC2** | | |
-|---|---|---|
+| **PC2** | **Value** | **Definition** |
 | FISA | 0.68 | Hydrophilic component of the SASA |
 | QPPCaco | 0.72 | Predicted apparent Caco-2 cell permeability in nm/sec  (passing the gut-blood barrier) |
 | QPlogKp | 0.68 | Predicted skin permeability |
